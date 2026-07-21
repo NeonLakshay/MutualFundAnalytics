@@ -2,7 +2,7 @@
 -- Dimension Table : Fund
 -- ==========================================================
 
-CREATE TABLE dim_fund (
+CREATE TABLE IF NOT EXISTS dim_fund (
     amfi_code INTEGER PRIMARY KEY,
     scheme_name TEXT NOT NULL,
     fund_house TEXT,
@@ -15,7 +15,7 @@ CREATE TABLE dim_fund (
 -- Dimension Table : Date
 -- ==========================================================
 
-CREATE TABLE dim_date (
+CREATE TABLE IF NOT EXISTS dim_date (
     date_id INTEGER PRIMARY KEY AUTOINCREMENT,
     date DATE UNIQUE,
     year INTEGER,
@@ -28,7 +28,7 @@ CREATE TABLE dim_date (
 -- Fact Table : NAV History
 -- ==========================================================
 
-CREATE TABLE fact_nav (
+CREATE TABLE IF NOT EXISTS fact_nav (
     nav_id INTEGER PRIMARY KEY AUTOINCREMENT,
     amfi_code INTEGER,
     date_id INTEGER,
@@ -45,7 +45,7 @@ CREATE TABLE fact_nav (
 -- Fact Table : Investor Transactions
 -- ==========================================================
 
-CREATE TABLE fact_transactions (
+CREATE TABLE IF NOT EXISTS fact_transactions (
     transaction_id INTEGER PRIMARY KEY AUTOINCREMENT,
 
     investor_id TEXT,
@@ -85,7 +85,7 @@ CREATE TABLE fact_transactions (
 -- Fact Table : Scheme Performance
 -- ==========================================================
 
-CREATE TABLE fact_performance (
+CREATE TABLE IF NOT EXISTS fact_performance (
 
     performance_id INTEGER PRIMARY KEY AUTOINCREMENT,
 
@@ -123,7 +123,7 @@ CREATE TABLE fact_performance (
 -- Fact Table : AUM
 -- ==========================================================
 
-CREATE TABLE fact_aum (
+CREATE TABLE IF NOT EXISTS fact_aum (
 
     aum_id INTEGER PRIMARY KEY AUTOINCREMENT,
 
