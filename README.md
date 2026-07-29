@@ -174,6 +174,50 @@ This eliminates manual reporting and ensures timely updates.
 
 ---
 
+## 📧 Email Configuration
+
+To enable the automated email reporting feature, follow these steps:
+
+### Step 1: Enable 2-Step Verification
+Enable Two-Factor Authentication (2FA) on your Google account.
+
+### Step 2: Generate a Gmail App Password
+Generate a 16-character Gmail App Password from your Google Account.
+
+### Step 3: Open the Email Configuration File
+
+Navigate to:
+
+```text
+dashboard/email_report.py
+```
+
+### Step 4: Update Your Email Credentials
+
+Replace the placeholder values with your own Gmail account details:
+
+```python
+sender_email = "your_sender_email@gmail.com"
+sender_password = "your_16_character_app_password"
+receiver_email = "receiver_email@gmail.com"
+```
+
+### Step 5: Save the File
+
+Save the changes and run the application.
+
+> **Note:** Never upload your real email address or App Password to GitHub. Always keep your credentials private.
+
+### 🔗 Generate a Gmail App Password
+
+If you don't already have an App Password, generate one from your Google Account:
+
+https://myaccount.google.com/apppasswords
+
+> **Security Notice:**  
+> This project uses placeholder email credentials for security reasons. Before running the email automation module, replace them with your own Gmail address, App Password, and receiver email. Never commit or publish your actual credentials to a public repository.
+
+
 # 🚀 Installation
 
 Clone the repository:

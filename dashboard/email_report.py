@@ -265,10 +265,10 @@ Developed with ❤️ using
 
 def send_email():
 
-    sender_email = "lakshay8941@gmail.com"
-    sender_password = "ddib wqec ijkn xgaf"
+    sender_email = "your_actual_sender@gmail.com"
+    sender_password = "your_new_16_character_app_password"
 
-    receiver_email = "mnsingh1677@gmail.com"
+    receiver_email = "your_actual_receiver@gmail.com"
 
     report_file = BASE_DIR / "weekly_report.html"
 
