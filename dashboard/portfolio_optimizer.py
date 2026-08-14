@@ -1,18 +1,30 @@
 from pathlib import Path
+
+import streamlit as st
+
 import sqlite3
 
 import numpy as np
 import pandas as pd
+
+st.error("🔥 PORTFOLIO OPTIMIZER FILE LOADED")
 
 # ----------------------------------------------------
 # Database
 # ----------------------------------------------------
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-DB_PATH = BASE_DIR / "db" / "bluestock_mf.db"
+DB_PATH = BASE_DIR / "database" / "bluestock_mf.db"
 
 
 def optimize_portfolio(selected_codes):
+
+    st.write("### 🔍 Portfolio Database Debug")
+    st.write("MODULE FILE:", str(Path(__file__).resolve()))
+    st.write("BASE DIR:", str(BASE_DIR))
+    st.write("DB PATH:", str(DB_PATH))
+    st.write("DB EXISTS:", Path(DB_PATH).exists())
+    st.write("DB IS FILE:", Path(DB_PATH).is_file())
 
     conn = sqlite3.connect(DB_PATH)
 

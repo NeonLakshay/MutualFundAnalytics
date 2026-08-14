@@ -5,7 +5,8 @@ import numpy as np
 import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-DB_PATH = BASE_DIR / "db" / "bluestock_mf.db"
+
+DB_PATH = BASE_DIR / "database" / "bluestock_mf.db"
 
 
 def run_monte_carlo(amfi_code):

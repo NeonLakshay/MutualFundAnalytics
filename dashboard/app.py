@@ -56,7 +56,7 @@ st.markdown("""
 # Database Connection
 # ----------------------------------------------------
 BASE_DIR = Path(__file__).resolve().parents[1]
-DB_PATH = BASE_DIR / "db" / "bluestock_mf.db"
+DB_PATH = BASE_DIR / "database" / "bluestock_mf.db"
 
 @st.cache_resource
 def get_connection():
@@ -180,7 +180,7 @@ with col4:
 
 st.markdown("---")
 
-st.success("✅ Database connected successfully.")
+# st.success("✅ Database connected successfully.")
 
 # ==========================================================
 # INTERACTIVE ANALYTICS
@@ -359,7 +359,7 @@ st.plotly_chart(fig5, use_container_width=True)
 
 st.markdown("---")
 
-st.success("🎉 Interactive Dashboard Loaded Successfully!")
+# st.success("🎉 Interactive Dashboard Loaded Successfully!")
 
 
 st.markdown("---")
