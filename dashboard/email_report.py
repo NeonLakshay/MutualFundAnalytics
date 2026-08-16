@@ -9,8 +9,8 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-DB_PATH = BASE_DIR / "db" / "bluestock_mf.db"
 
+DB_PATH = BASE_DIR / "database" / "bluestock_mf.db"
 conn = sqlite3.connect(DB_PATH)
 
 
@@ -236,7 +236,7 @@ Generated Automatically on
 </p>
 
 <p>
-Developed with ❤️ using
+Developed using
 <b>Python</b> •
 <b>SQLite</b> •
 <b>Pandas</b> •
@@ -265,10 +265,10 @@ Developed with ❤️ using
 
 def send_email():
 
-    sender_email = "your_actual_sender@gmail.com"
-    sender_password = "your_new_16_character_app_password"
+    sender_email = "put sender's email here !"
+    sender_password = "put password here !"
 
-    receiver_email = "your_actual_receiver@gmail.com"
+    receiver_email = "put receiver's email here !"
 
     report_file = BASE_DIR / "weekly_report.html"
 
