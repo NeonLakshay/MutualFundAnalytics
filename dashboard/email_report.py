@@ -293,7 +293,7 @@ def send_email():
 
         server.send_message(message)
 
-    print("✅ Email sent successfully!")
+    print("✅ Email sent successfully")
 
 if __name__ == "__main__":
 
