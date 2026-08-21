@@ -65,7 +65,7 @@ def main():
 
     # 5. Ask for commit message
     commit_message = input(
-        "\n📝 Enter commit message [default: Update project]: " #put ->Final porject update
+        "\n📝 Enter commit message [default: Update project]: " #put ->Final project update
     ).strip()
 
     if not commit_message:
